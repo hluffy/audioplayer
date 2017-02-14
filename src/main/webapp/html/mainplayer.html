@@ -10,6 +10,9 @@
 		<script src="../js/mplayer.js"></script>
 		<script src="../js/mplayer-functions.js"></script>
 		<script src="../js/mplayer-list.js"></script>
+		<style>
+			::-webkit-scrollbar{width:0;}
+		</style>
 	</head>
 	<body>
 		<div class="mp mp-show">
@@ -48,7 +51,7 @@
 		        <ul class="mp-lrc"></ul>
 		    </div>
 		    <button class="mp-lrc-close"></button>
-		    <div class="mp-list-box mp-list-show">
+		    <div class="mp-list-box mp-list-show" style="overflow:auto">
 		        <ul class="mp-list-title"></ul>
 		        <table class="mp-list-table">
 		            <thead>
@@ -60,6 +63,7 @@
 		            </thead>
 		            <tbody class="mp-list"></tbody>
 		        </table>
+		        <table></table>
 		    </div>
 		</div>
 	</body>

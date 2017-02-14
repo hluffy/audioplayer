@@ -4,7 +4,7 @@
  */
 
 function setEffects (player) {
-	// 滑块
+//	 滑块
 //	player.dom.volRange.nstSlider({
 //		"left_grip_selector": ".mp-vol-circle",
 //		"value_changed_callback": function(cause, value) {
