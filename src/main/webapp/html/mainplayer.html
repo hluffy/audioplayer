@@ -47,7 +47,7 @@
 		    <button class="mp-toggle">
 		        <span class="mp-toggle-img"></span>
 		    </button>
-		    <div class="mp-lrc-box mp-lrc-show">
+		    <div class="mp-lrc-box">
 		        <ul class="mp-lrc"></ul>
 		    </div>
 		    <button class="mp-lrc-close"></button>
@@ -93,28 +93,28 @@
 		}, function () {
 			// 绑定事件
 			this.on('afterInit', function () {
-				console.log('播放器初始化完成，正在准备播放');
+// 				console.log('播放器初始化完成，正在准备播放');
 			}).on('beforePlay', function () {
 				var $this = this;
 				var song = $this.getCurrentSong(true);
 				var songName = song.name + ' - ' + song.singer;
-				console.log('即将播放'+songName+'，return false;可以取消播放');
+// 				console.log('即将播放'+songName+'，return false;可以取消播放');
 			}).on('timeUpdate', function () {
 				var $this = this;
-				console.log('当前歌词：' + $this.getLrc());
+// 				console.log('当前歌词：' + $this.getLrc());
 			}).on('end', function () {
 				var $this = this;
 				var song = $this.getCurrentSong(true);
 				var songName = song.name + ' - ' + song.singer;
-				console.log(songName+'播放完毕，return false;可以取消播放下一曲');
+// 				console.log(songName+'播放完毕，return false;可以取消播放下一曲');
 			}).on('mute', function () {
 				var status = this.getIsMuted() ? '已静音' : '未静音';
-				console.log('当前静音状态：' + status);
+// 				console.log('当前静音状态：' + status);
 			}).on('changeMode', function () {
 				var $this = this;
 				var mode = modeText[$this.getPlayMode()];
 				$this.dom.container.find('.mp-mode').attr('title',mode);
-				console.log('播放模式已切换为：' + mode);
+// 				console.log('播放模式已切换为：' + mode);
 			});
 		});
 		
